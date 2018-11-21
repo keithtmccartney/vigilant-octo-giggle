@@ -5,7 +5,7 @@ Grab the article at [https://medium.com/@thedevsaddam/build-restful-api-service-
 
 ## Tips/Run
 
-* Abc
+* Navigating over to my GOPATH I'm adding the **gin-gonic** - `$ go get gopkg.in/gin-gonic/gin.v1` - for "golang simplest/fastest framework", **gorm** - `$ go get -u github.com/jinzhu/gorm` - "a beautiful ORM" for database work, and **mysql** - `$ go get github.com/go-sql-driver/mysql` - for SQL connectivity
 
 ## What's it all about?
 
