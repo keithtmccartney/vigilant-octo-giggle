@@ -2,7 +2,11 @@ package main
 
 import (
     "github.com/gin-gonic/gin"
+    "github.com/jinzhu/gorm"
+    _ "github.com/jinzhu/gorm/dialects/mysql"
 )
+
+var db *gorm.DB
 
 func main() {
     router := gin.Default()
@@ -16,4 +20,18 @@ func main() {
     }
 
     router.Run()
+}
+
+func init() {
+    //open a db connection
+    var err error
+
+    db, err = gorm.Open("mysql", "root:12345@/demo?charset=utf8&parseTime=True&loc=Local")
+
+    if err != nill {
+        panic("failed to connect database")
+    }
+
+    //Migrate the schema
+    db.AutoMigrate(&todoModel{})
 }
